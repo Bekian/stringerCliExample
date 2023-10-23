@@ -6,10 +6,19 @@ import (
 )
 
 func Reverse(input string) (output string) {
-	for _, c := range input {
-		output += string(c)
+	// Convert the string to a rune slice to work with individual characters
+	inputRunes := []rune(input)
+	length := len(inputRunes)
+	// Initialize an empty rune slice to store the reversed characters
+	reversed := make([]rune, length)
+	// Reverse the characters
+	for i, j := 0, length-1; i < length; i, j = i+1, j-1 {
+		reversed[i] = inputRunes[j]
 	}
+	// Convert the reversed rune slice back to a string
+	output = string(reversed)
 	return
+
 }
 
 func Inspect(input string, digits bool) (count int, kind string) {

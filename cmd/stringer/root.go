@@ -8,7 +8,7 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "stringer",
+	Use:   "./stringerExample",
 	Short: "stringer - a simple CLI to transform and inspect strings",
 	Long: `stringer is a super fancy CLI (kidding)
    
